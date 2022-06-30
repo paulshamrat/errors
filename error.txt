@@ -1,0 +1,20 @@
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-12-e0ce25ec2a43> in <module>()
+     19 #print(flist)
+     20 
+---> 21 trajlist = pt.load(flist, pdb, stride=stride_traj)
+     22 traj_image = trajlist.iterframe(autoimage=True, rmsfit=0)
+     23 traj_write = pt.write_traj(traj_end, traj_image, overwrite=True)
+
+3 frames
+pytraj/trajectory/c_traj/c_trajectory.pyx in pytraj.trajectory.c_traj.c_trajectory.TrajectoryCpptraj._load()
+
+/usr/local/lib/python3.7/site-packages/pytraj/utils/check_and_assert.py in ensure_exist(filename)
+     78     if not os.path.exists(filename):
+     79         txt = "can not find %s" % filename
+---> 80         raise RuntimeError(txt)
+     81 
+     82 
+
+RuntimeError: can not find /content/drive/MyDrive/Paul/psmb8/5l5a50m/1aki_prod_50.dcd
